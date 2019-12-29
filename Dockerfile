@@ -10,9 +10,9 @@ COPY package*.json ./
 RUN cd ${WORK_DIR} \
   && npm install
 
-COPY . ${WORK_DIR}
+COPY . /usr/src/app/
 
-VOLUME ${WORKDIR}
+VOLUME /usr/src/app
 
 # EXPOSE 8080
 CMD [ "node"]
