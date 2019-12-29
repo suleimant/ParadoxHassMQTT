@@ -5,12 +5,11 @@ ENV CONFIGFILE=${WORKDIR}/package.json
 
 RUN mkdir -p ${WORKDIR}
 
-COPY package*.json ./
-
 RUN cd ${WORK_DIR} \
   && npm install
 
 COPY . /usr/src/app/
+COPY package*.json ./
 
 VOLUME /usr/src/app
 
