@@ -1,12 +1,6 @@
-FROM centos
-
-# Run as root on RHEL, CentOS, CloudLinux or Fedora:
-RUN curl -sL https://rpm.nodesource.com/setup | bash -
-# Install as Root
-RUN yum install -y nodejs
+FROM 10.18.0-jessie
 
 WORKDIR /usr/src/app
-
 # Install app dependencies
 # A wildcard is used to ensure both package.json AND package-lock.json are copied
 # where available (npm@5+)
