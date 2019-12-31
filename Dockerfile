@@ -1,4 +1,9 @@
-FROM centos/nodejs-10-centos7
+FROM centos
+
+# Run as root on RHEL, CentOS, CloudLinux or Fedora:
+RUN curl -sL https://rpm.nodesource.com/setup | bash -
+# Install as Root
+RUN yum install -y nodejs
 
 WORKDIR /usr/src/app
 
