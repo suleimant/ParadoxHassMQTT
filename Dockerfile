@@ -1,17 +1,14 @@
-FROM node:10
+FROM node
 
-ENV  WORKDIR=/usr/src/app
-ENV CONFIGFILE=${WORKDIR}/package.json
+WORKDIR /usr/src/app
 
-RUN mkdir -p ${WORKDIR}
+# Install app dependencies
+# A wildcard is used to ensure both package.json AND package-lock.json are copied
+# where available (npm@5+)
+COPY . ./
 
-RUN cd ${WORK_DIR} \
-  && npm install
+RUN npm install --unsafe-perm
+# If you are building your code for production
+# RUN npm ci --only=production
 
-COPY . /usr/src/app/
-COPY package*.json ./
-
-VOLUME /usr/src/app
-
-# EXPOSE 8080
-CMD [ "node"]
+CMD [ "node", "app.js" ]
