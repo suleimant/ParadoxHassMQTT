@@ -1,4 +1,4 @@
-FROM node
+FROM nodejs-10-centos7
 
 WORKDIR /usr/src/app
 
@@ -7,7 +7,7 @@ WORKDIR /usr/src/app
 # where available (npm@5+)
 COPY . ./
 
-RUN npm install --unsafe-perm
+RUN npm install
 # If you are building your code for production
 # RUN npm ci --only=production
 
