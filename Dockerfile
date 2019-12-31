@@ -1,4 +1,4 @@
-FROM 10.18.0-jessie
+FROM node:10.18.0-jessie
 
 WORKDIR /usr/src/app
 # Install app dependencies
