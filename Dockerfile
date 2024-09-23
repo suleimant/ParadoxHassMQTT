@@ -1,4 +1,4 @@
-FROM node:10.18.0-jessie
+FROM node:current-alpine3.20
 
 WORKDIR /usr/src/app
 # Install app dependencies
