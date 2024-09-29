@@ -2,7 +2,7 @@
   "name": "paradoxhassmqtt",
   "version": "1.0.0",
   "description": "Bridges Paradox Panels with HomeAssistant",
-  "main": "app.js",
+  "main": "./config/app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "run": "forever start  -o out.log -e err.log app.js"
